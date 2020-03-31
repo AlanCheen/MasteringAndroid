@@ -43,7 +43,7 @@ open class MainActivity : AppCompatActivity() {
 
     }
 
-    fun start(activityClassName: String) {
+    private fun start(activityClassName: String) {
         start(Intent().apply {
             setClassName(this@MainActivity, activityClassName)
         })
