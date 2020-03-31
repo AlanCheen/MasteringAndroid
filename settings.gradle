@@ -1,2 +1,5 @@
+include ':mservice'
+include ':mactivity'
+include ':mbroadcast'
 include ':app'
 rootProject.name = "MasteringAndroid"
