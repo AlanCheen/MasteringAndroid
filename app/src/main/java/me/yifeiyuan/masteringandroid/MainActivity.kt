@@ -31,14 +31,10 @@ open class MainActivity : AppCompatActivity() {
 
     data class Showcase(val txt: String, val clickListener: View.OnClickListener)
 
-    @Component(layoutId = R.layout.showcase_item, autoRegister = true)
+    @Component(layoutId = R.layout.showcase_item)
     open class ShowcaseComponent(view: View) : FlapComponent<Showcase>(view) {
 
-        private var text: TextView
-
-        init {
-            text = findViewById<TextView>(R.id.showcaseText)
-        }
+        private var text: TextView = findViewById(R.id.showcaseText)
 
         override fun onBind(model: Showcase) {
             text.text = model.txt
